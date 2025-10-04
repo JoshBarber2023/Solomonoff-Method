@@ -151,7 +151,10 @@ python testing.py
 
 ### Notes:
 
-- The script expects a working OpenAI API key. The `LLMClient` is instantiated with an API key argument; alternatively set `OPENAI_API_KEY` in the environment and adapt the code accordingly.
+- **IMPORTANT:** Both `testing.py` and `bma.py` require an OpenAI API key. You must add your key to the `api_key` variable in each file:
+  ```python
+  api_key = "your-openai-api-key-here"
+  ```
 - If `tiktoken` is unavailable, the code degrades to a token-less simplicity approximation.
 
 ---
@@ -199,17 +202,30 @@ This repository includes a **Bayesian Model Averaging** implementation (`bma.py`
 The `bma/` results folder contains outputs from the BMA method, enabling direct comparison with Solomonoff results in folders `1/`, `2/`, `3/`, `4/`, `50MEGA/`, and `60MEGA/`.
 
 **Running BMA:**
-```python
-# Generate fresh BMA predictions
-python bma.py
 
-# Or convert existing Solomonoff results to BMA
+BMA can be run in two modes:
+
+1. **Generate fresh hypotheses** (independent BMA analysis):
+```python
+from bma import run
+run(
+    problem_file='MINI-ARC/data/MiniARC/problem.json',
+    out_folder='bma_results',
+    n_hyp=6,
+    model='gpt-4'
+)
+```
+
+2. **Convert existing Solomonoff results** (reuse hypotheses, apply BMA weighting):
+```python
 from bma import run_from_solomonoff_file
 run_from_solomonoff_file(
     solomonoff_file='results/problem_id/full_leave_one_out_analysis.json',
     out_folder='bma_results'
 )
 ```
+
+The second approach is computationally efficient as it reuses GPT-generated hypotheses from the Solomonoff method and only recomputes the weights using BMA's probabilistic likelihood model.
 
 ---
 
