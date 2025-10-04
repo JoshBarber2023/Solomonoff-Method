@@ -1,0 +1,4 @@
+{
+  "content": "{\"hypothesis\": \"The pattern of colored cells in the input grid is rotated 90 degrees clockwise to obtain the output grid.\", \"sub_hypotheses\": [\"Level 1: Each colored cell in the input grid is rotated 90 degrees clockwise around the centroid of the colored cells.\", \"Level 2: There are no group-level patterns since there is only one group of colored cells in each grid.\", \"Level 3: The grid maintains its size and colored cells maintain their relative position but are rotated 90 degrees clockwise around the centroid of the group of colored cells.\"]}",
+  "timestamp": 1758597931.8632128
+}

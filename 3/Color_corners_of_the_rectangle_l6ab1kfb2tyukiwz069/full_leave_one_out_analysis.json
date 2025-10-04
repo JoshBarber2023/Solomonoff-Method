@@ -1,0 +1,2443 @@
+{
+  "problem_id": "Color_corners_of_the_rectangle_l6ab1kfb2tyukiwz069",
+  "eval_idx": 2,
+  "n_hypotheses": 7,
+  "analyses_on_training_set": [
+    {
+      "hypothesis": {
+        "hypothesis": "The output grid is formed by changing the cells with 3 (green) color that are in the corners of the object to 7 (red) while retaining the other cells as they are.",
+        "sub_hypotheses": [
+          "Level 1: For each object in the input grid, the cells in the corners are changed to 7 (red) color.",
+          "Level 2: There are no explicit interactions between objects in the input grid. Each object is processed independently to form the corresponding output object.",
+          "Level 3: The overall grid structure and the positions of the objects within the grid remain the same. Only the colors of the cells at the corners of each object are changed."
+        ]
+      },
+      "accuracy": 1.0,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 1.0,
+          "equal": true
+        },
+        {
+          "input": [
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 1.0,
+          "equal": true
+        }
+      ],
+      "simplicity": 0.3517587939698492,
+      "solomonoff_score": 0.3517587939698492
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "The objects in the input grid are modified by changing the cells in the corners of the object (if the object is a square/rectangle) to a different color (7), while the remaining cells remain the same.",
+        "sub_hypotheses": [
+          "Level 1: Individual objects have their corner cells change color.",
+          "Level 2: This pattern holds true for all objects in the grid, regardless of their positions relative to each other.",
+          "Level 3: The overall grid shows a pattern where the corners of square/rectangular objects change color."
+        ]
+      },
+      "accuracy": 1.0,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 1.0,
+          "equal": true
+        },
+        {
+          "input": [
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 1.0,
+          "equal": true
+        }
+      ],
+      "simplicity": 0.49246231155778897,
+      "solomonoff_score": 0.49246231155778897
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "The transformation is selecting the corners of the green square and changing them to another color (represented as 7). The center remains unaltered.",
+        "sub_hypotheses": [
+          "Object-level changes: The cells at the corners of the green square object are assigned the color 7 (red). The rest of the cells within the green square remain the same.",
+          "Group-level patterns: None observed.",
+          "Grid-level emergent behaviour: The overall pattern observable is a central unaltered square with its corners changed to another color."
+        ]
+      },
+      "accuracy": 1.0,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 1.0,
+          "equal": true
+        },
+        {
+          "input": [
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 1.0,
+          "equal": true
+        }
+      ],
+      "simplicity": 0.5175879396984925,
+      "solomonoff_score": 0.5175879396984925
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "The transformation from the input grid to the output grid involves converting corner cells from '3 (green)' to '7 (light blue)' in all squares of 3x3 '3 (green)' cells existing in the grid.",
+        "sub_hypotheses": [
+          "Level 1: Corner cells of 3x3 green squares are replaced with light blue cells.",
+          "Level 2: Each 3x3 green square is isolated and treated independently for transformation.",
+          "Level 3: The overall grid maintain its elements outside the 3x3 green squares, changes only occur within these squares."
+        ]
+      },
+      "accuracy": 0.9,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 1.0,
+          "equal": true
+        },
+        {
+          "input": [
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.8,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.44723618090452266,
+      "solomonoff_score": 0.4025125628140704
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "The 3 by 3 green section centered in the grid changes to have only the number 3 (green) cells forming a cross with one cell in each direction (up, down, left and right) from the center. The four corners are transformed into number 7 cells.",
+        "sub_hypotheses": [
+          "Level 1: Each 3 (green) cell in the corner of the 3 by 3 section changes to 7, the rest remains the same.",
+          "Level 2: Cross formation remains the same by transforming cells at maximum delta from center to the digit 7.",
+          "Level 3: Considering formations of 3 by 3 green cells centered in the grid, turns them into a '7-3-7' pattern, up-down and left-right, but leaving the central cross as a '3' in the grid."
+        ]
+      },
+      "accuracy": 0.9,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 1.0,
+          "equal": true
+        },
+        {
+          "input": [
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.8,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.1758793969849246,
+      "solomonoff_score": 0.15829145728643215
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "All green-colored objects outlined by zeros at cardinal directions results in a transformation of objects at the corners to a new value in the output.",
+        "sub_hypotheses": [
+          "Level 1: The corners of each '3 (green)' functional unit likely turn to '7' in the subsequent step e.g. from the [1,1], [1,3], [3,1], [3,3] (or similar sized matrices, not specific to 3x3)",
+          "Level 2: Inter-object relations remain unmodified, noting that displacement and modification affect consistent potential conjunctions at their corners.",
+          "Level 3: Combined object-level modifications collectively tune the multitude of objects spread out in grid configuration which maintains preservation of symbols at OK blocks and tweaks corners internal to the square matrix formed."
+        ]
+      },
+      "accuracy": 1.0,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 1.0,
+          "equal": true
+        },
+        {
+          "input": [
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 1.0,
+          "equal": true
+        }
+      ],
+      "simplicity": 0.2361809045226131,
+      "solomonoff_score": 0.2361809045226131
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "The transformation process changes a 3-valued cell located around the corner of a 3-cluster array into 7.",
+        "sub_hypotheses": [
+          "Level 1: Only objects labelled with 3 that are in a defined closed formation get converted into 7 as part of transformation process.",
+          "Level 2: Transformation rules removes the corner entry in N-formation for the 3's living in the matrix, This occurs vertically and horizontally implying conversion akin to a rotation converging outsides.",
+          "Level 3: At sequentially structured top and chauffeur elements selection the sequential Model shows purge transformation fueled focus on object toggles neighboring tree mob."
+        ]
+      },
+      "accuracy": 0.88,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 1.0,
+          "equal": true
+        },
+        {
+          "input": [
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              3,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              7,
+              7,
+              7,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              7,
+              3,
+              7,
+              0
+            ],
+            [
+              0,
+              7,
+              7,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.76,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.39698492462311563,
+      "solomonoff_score": 0.34934673366834174
+    }
+  ],
+  "eval_example_input": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      3,
+      3,
+      3,
+      0
+    ],
+    [
+      0,
+      3,
+      3,
+      3,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "eval_example_expected": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      7,
+      3,
+      7,
+      0
+    ],
+    [
+      0,
+      7,
+      3,
+      7,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "per_hyp_eval_predictions": [
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        7,
+        3,
+        7,
+        0
+      ],
+      [
+        0,
+        7,
+        3,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        7,
+        3,
+        7,
+        0
+      ],
+      [
+        0,
+        7,
+        3,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        7,
+        3,
+        7,
+        0
+      ],
+      [
+        0,
+        3,
+        3,
+        3,
+        0
+      ],
+      [
+        0,
+        7,
+        3,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        7,
+        3,
+        7,
+        0
+      ],
+      [
+        0,
+        7,
+        3,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        7,
+        3,
+        7,
+        0
+      ],
+      [
+        0,
+        3,
+        3,
+        3,
+        0
+      ],
+      [
+        0,
+        7,
+        3,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        7,
+        3,
+        7,
+        0
+      ],
+      [
+        0,
+        7,
+        3,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        7,
+        3,
+        7,
+        0
+      ],
+      [
+        0,
+        3,
+        7,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  ],
+  "solomonoff_scores": [
+    0.3517587939698492,
+    0.49246231155778897,
+    0.5175879396984925,
+    0.4025125628140704,
+    0.15829145728643215,
+    0.2361809045226131,
+    0.34934673366834174
+  ],
+  "weighted_matrix": {
+    "per_cell_probs": [
+      [
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        }
+      ],
+      [
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.7305257252764865,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.2694742747235134,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.7305257252764865,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.2694742747235134,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.7305257252764865,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.2694742747235134,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        }
+      ],
+      [
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.2694742747235134,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.7305257252764865,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 1.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.2694742747235134,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.7305257252764865,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        }
+      ],
+      [
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.13928514184965538,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.8607148581503445,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.8607148581503445,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.13928514184965538,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.13928514184965538,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.8607148581503445,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        }
+      ],
+      [
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        }
+      ]
+    ],
+    "argmax_grid": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        7,
+        3,
+        7,
+        0
+      ],
+      [
+        0,
+        7,
+        3,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "colors": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+}

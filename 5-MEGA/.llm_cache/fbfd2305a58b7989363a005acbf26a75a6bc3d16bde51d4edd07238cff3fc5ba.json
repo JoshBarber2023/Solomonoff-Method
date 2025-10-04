@@ -1,0 +1,4 @@
+{
+  "content": "{\n\"hypothesis\": \"Objects in the input grid are replicated in the output grid, extending vertically downwards from their original positions. The number of replications depends on the position of the object in the input grid.\",\n\"sub_hypotheses\": [\n\"Level 1: Each object in the input grid is replicated one or more times in the output grid. The color of the object remains the same.\",\n\"Level 2: The number of times an object is replicated depends on its position in the input grid. Objects closer to the top of the grid are replicated more times than those at the bottom.\",\n\"Level 3: The overall pattern in the output grid shows a vertical extension of the objects from the input grid, filling up the grid from top to bottom.\"\n]\n}",
+  "timestamp": 1758590959.8296673
+}

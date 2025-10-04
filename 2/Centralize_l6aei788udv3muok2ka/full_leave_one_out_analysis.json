@@ -1,0 +1,2158 @@
+{
+  "problem_id": "Centralize_l6aei788udv3muok2ka",
+  "eval_idx": 2,
+  "n_hypotheses": 6,
+  "analyses_on_training_set": [
+    {
+      "hypothesis": {
+        "hypothesis": "The objects in the grid move from their initial positions to form a plus '+' shape centered on the grid. The cell at the center of the object becomes the center of the '+' shape in the output, and the rest of the cells position themselves around this center cell.",
+        "sub_hypotheses": [
+          "Level 1: Each object in the input moves its individual cells from their initial positions to new positions such that they form a '+' shape. The center cell remains at the center, and the other cells arrange themselves to the left, right, above, and below this center cell.",
+          "Level 2: There seems to be no interaction or relationship between different objects. Each object transforms independently of the others.",
+          "Level 3: The overall behavior of the grid seems to be that objects (if more than one exist) relocate independently, each forming a '+' shape. The new locations of these objects are centered on the grid, but their relative positions to each other (if any) do not change."
+        ]
+      },
+      "accuracy": 0.88,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              2,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 1.0,
+          "equal": true
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              5,
+              5,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              5,
+              5,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              5,
+              0,
+              0
+            ],
+            [
+              0,
+              5,
+              5,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              5,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.76,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.045226130653266305,
+      "solomonoff_score": 0.03979899497487435
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "The object in the input grid moves diagonally downward from the top left corner towards the center of the grid, maintaining its original shape and color.",
+        "sub_hypotheses": [
+          "Level 1: The individual cells of the object in the input grid maintain their relative positions and color in the output grid, but the overall position of the object changes.",
+          "Level 2: No interactions or relationships between objects in the grid are present in the provided examples, as there is only one object at a time.",
+          "Level 3: The object in the input grid moves in a pattern that seems to target the center of the grid in the output, regardless of its original position. However, it does not move outside the original bounding box size of the object."
+        ]
+      },
+      "accuracy": 0.88,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              2,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 1.0,
+          "equal": true
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              5,
+              5,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              5,
+              5,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              5,
+              5,
+              5
+            ],
+            [
+              0,
+              0,
+              5,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              5,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.76,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.29145728643216084,
+      "solomonoff_score": 0.25648241206030153
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "The objects in the input grid move towards the center of the grid, maintaining their original shape and color.",
+        "sub_hypotheses": [
+          "Level 1: Object-level changes - An individual object in the grid moves from its original position towards the center of the grid, keeping its shape unchanged.",
+          "Level 2: Group-level patterns - There is only one group of objects in each grid. This group moves as a single unit towards the center of the grid.",
+          "Level 3: Grid-level emergent behavior - Regardless of the original locations of the objects in the grid, they all shift position towards a central location, maintaining the original layout of the objects."
+        ]
+      },
+      "accuracy": 0.9,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              2,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 1.0,
+          "equal": true
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              5,
+              5,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              5,
+              5,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              5,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              5,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              5,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.8,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.38190954773869346,
+      "solomonoff_score": 0.3437185929648241
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "The input objects which are cross-shaped clusters of cells are repositioned to the centre of the grid. They maintain their color and form.",
+        "sub_hypotheses": [
+          "Level 1: The individual cross-shaped objects which are clusters of colored cells are repositioned from their respective positions to the center of the grid maintaining their form and color",
+          "Level 2: There are no interactions or relationships observed because there is only one object.",
+          "Level 3: The entire grid shifts the position of the cluster from varying positions to the center of the grid."
+        ]
+      },
+      "accuracy": 0.8400000000000001,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              2,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 1.0,
+          "equal": true
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              5,
+              5,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              5,
+              5,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              5,
+              5,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              5
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.68,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.48743718592964824,
+      "solomonoff_score": 0.40944723618090456
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "Objects are moved from their original location to the center of the grid maintaining their relational pattern",
+        "sub_hypotheses": [
+          "Level 1: Individual cells of the object retain their relational pattern when they are moved",
+          "Level 2: No group-level pattern is observed as only one object is presented in the input grid",
+          "Level 3: Overall, it can be observed that the object is realigned to position at the center of the grid keeping the relationship between its constituent cells intact"
+        ]
+      },
+      "accuracy": 0.88,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              2,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 1.0,
+          "equal": true
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              5,
+              5,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              5,
+              5,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              5,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              5,
+              5,
+              5
+            ],
+            [
+              0,
+              0,
+              5,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.76,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.5728643216080402,
+      "solomonoff_score": 0.5041206030150754
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "The pattern structure for an unique shape rotates 90 degrees counterclockwise locally between the input grid and output grid without affecting other objects or the entire input grid.",
+        "sub_hypotheses": [
+          "Level 1: The unique shape is presumed to reverse its internal order and maintain absolute cell color during this rotation.",
+          "Level 2: This pattern does not have relationships or engagements with other patterns or single numeric cells.",
+          "Level 3: The input grid doesn't composits numerous or fancy patterns but accepts multiple and uniform iterations of the rotation."
+        ]
+      },
+      "accuracy": 0.7,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              2,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.76,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              5,
+              5,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              5,
+              5,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              5,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              5,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              5,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              5,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.64,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.4974874371859297,
+      "solomonoff_score": 0.34824120603015074
+    }
+  ],
+  "eval_example_input": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      6,
+      6,
+      6,
+      0,
+      0
+    ],
+    [
+      6,
+      0,
+      6,
+      0,
+      0
+    ],
+    [
+      6,
+      0,
+      6,
+      0,
+      0
+    ]
+  ],
+  "eval_example_expected": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      6,
+      6,
+      6,
+      0
+    ],
+    [
+      0,
+      6,
+      0,
+      6,
+      0
+    ],
+    [
+      0,
+      6,
+      0,
+      6,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "per_hyp_eval_predictions": [
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        6,
+        6,
+        6,
+        0
+      ],
+      [
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        6,
+        6,
+        6,
+        0
+      ],
+      [
+        0,
+        6,
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        6,
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        6,
+        6,
+        6,
+        0
+      ],
+      [
+        0,
+        6,
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        6,
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        6,
+        6,
+        6,
+        0
+      ],
+      [
+        0,
+        6,
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        6,
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        6,
+        6,
+        6,
+        0
+      ],
+      [
+        0,
+        6,
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        6,
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        6,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        6,
+        6,
+        6
+      ],
+      [
+        0,
+        0,
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        6,
+        0
+      ]
+    ]
+  ],
+  "solomonoff_scores": [
+    0.03979899497487435,
+    0.25648241206030153,
+    0.3437185929648241,
+    0.40944723618090456,
+    0.5041206030150754,
+    0.34824120603015074
+  ],
+  "weighted_matrix": {
+    "per_cell_probs": [
+      [
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        }
+      ],
+      [
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.1831105004491888,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.8168894995508112,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.02092691433705014,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.9790730856629499,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.20403741478623894,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.795962585213761,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        }
+      ],
+      [
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.1831105004491888,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.8168894995508112,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.795962585213761,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.20403741478623894,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 1.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.8168894995508112,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.1831105004491888,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        }
+      ],
+      [
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.1831105004491888,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.8168894995508112,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.02092691433705014,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.9790730856629499,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        }
+      ],
+      [
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.8168894995508112,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.1831105004491888,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        }
+      ]
+    ],
+    "argmax_grid": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        6,
+        6,
+        6,
+        0
+      ],
+      [
+        0,
+        6,
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        6,
+        0,
+        6,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "colors": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+}

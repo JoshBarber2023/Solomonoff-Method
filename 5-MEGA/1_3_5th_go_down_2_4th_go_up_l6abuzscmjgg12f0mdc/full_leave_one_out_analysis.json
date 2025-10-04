@@ -1,0 +1,6148 @@
+{
+  "problem_id": "1_3_5th_go_down_2_4th_go_up_l6abuzscmjgg12f0mdc",
+  "eval_idx": 2,
+  "n_hypotheses": 20,
+  "analyses_on_training_set": [
+    {
+      "hypothesis": {
+        "hypothesis": "Objects in the input grid are replicated in the output grid, extending vertically downwards from their original positions. The number of replications depends on the position of the object in the input grid.",
+        "sub_hypotheses": [
+          "Level 1: Each object in the input grid is replicated one or more times in the output grid. The color of the object remains the same.",
+          "Level 2: The number of times an object is replicated depends on its position in the input grid. Objects closer to the top of the grid are replicated more times than those at the bottom.",
+          "Level 3: The overall pattern in the output grid shows a vertical extension of the objects from the input grid, filling up the grid from top to bottom."
+        ]
+      },
+      "accuracy": 0.6799999999999999,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              5
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              0,
+              6,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              0,
+              7,
+              6,
+              0,
+              5
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.72,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              0,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              0,
+              5,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.64,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.31155778894472363,
+      "solomonoff_score": 0.21185929648241206
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "Each object in the input grid is replicated in the output grid, appearing in the same column but spread across all rows.",
+        "sub_hypotheses": [
+          "Level 1: Each individual object is replicated vertically within its column in the output grid, such that it appears in each row.",
+          "Level 2: The relative horizontal positions of the objects (i.e., their columns) are preserved from the input to the output.",
+          "Level 3: The overall pattern of the output grid is that every column contains the same set of objects, arranged vertically, as in the input grid, but spread across all rows."
+        ]
+      },
+      "accuracy": 0.64,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              5
+            ]
+          ],
+          "predicted": [
+            [
+              1,
+              7,
+              0,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.64,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ]
+          ],
+          "predicted": [
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.64,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.4321608040201005,
+      "solomonoff_score": 0.2765829145728643
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "Each object in the input grid is duplicated in the output grid in a vertical line, maintaining their horizontal position. The number of duplicates is equal to the height of the grid.",
+        "sub_hypotheses": [
+          "Level 1: Each individual object is duplicated vertically, maintaining its horizontal position.",
+          "Level 2: The relative positions of the objects remain the same, but each object is duplicated vertically.",
+          "Level 3: The overall grid shows a pattern where each unique object forms a vertical line, with the number of duplicates being equal to the height of the grid."
+        ]
+      },
+      "accuracy": 0.66,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              5
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              0,
+              6,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.68,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ]
+          ],
+          "predicted": [
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.64,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.4773869346733668,
+      "solomonoff_score": 0.3150753768844221
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "The objects on the grid are duplicated in a vertical manner, filling each column from top to bottom.",
+        "sub_hypotheses": [
+          "Level 1: Each object is duplicated vertically in its column until no empty space remains above it.",
+          "Level 2: The objects are duplicated independently of each other, without any apparent interaction or relationship.",
+          "Level 3: The grid's overall pattern shows a vertical filling behavior, with each column populated by duplicates of the original objects present in it."
+        ]
+      },
+      "accuracy": 0.62,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              5
+            ]
+          ],
+          "predicted": [
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.6,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ]
+          ],
+          "predicted": [
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.64,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.5577889447236181,
+      "solomonoff_score": 0.3458291457286432
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "Every object in the grid extends vertically to fill the entire column it is located in, from top to bottom, maintaining the original color of each object.",
+        "sub_hypotheses": [
+          "Level 1: Each individual object in the grid is duplicated vertically, filling up the entire column it is located in.",
+          "Level 2: The vertical extension of objects does not affect the relative positions of the objects in their respective columns.",
+          "Level 3: The grid-level emergent behavior is that all columns containing an object are fully filled with the color of that object, resulting in a grid with vertically extended objects."
+        ]
+      },
+      "accuracy": 0.62,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              5
+            ]
+          ],
+          "predicted": [
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.6,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ]
+          ],
+          "predicted": [
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.64,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.4371859296482412,
+      "solomonoff_score": 0.27105527638190957
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "Individual objects in the grid are duplicated in a downward direction until they reach the bottom row or another object.",
+        "sub_hypotheses": [
+          "Level 1: Each object in the grid is duplicated directly below its original position until it reaches the bottom row or encounters another object.",
+          "Level 2: The order of objects in each column is maintained in the duplication process.",
+          "Level 3: The overall grid shows a pattern of vertical expansion of objects while preserving the original order of objects in each column."
+        ]
+      },
+      "accuracy": 0.7,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              5
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              0,
+              6,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.68,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.72,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.542713567839196,
+      "solomonoff_score": 0.3798994974874372
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "Each object in the input grid is expanded vertically downwards to fill the empty space below it, until it reaches another object or the bottom of the grid. If an object is already at the bottom of the grid, it expands upwards instead.",
+        "sub_hypotheses": [
+          "Level 1: Each individual object in the grid is expanded vertically, creating duplicates of itself in the cells directly below it.",
+          "Level 2: If an object encounters another object while expanding, it stops expanding. If an object is at the bottom of the grid, it expands upwards instead.",
+          "Level 3: The overall grid shows a pattern of vertical expansion of objects, filling the empty space below them and creating a more densely filled grid."
+        ]
+      },
+      "accuracy": 0.6799999999999999,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              5
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.64,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.72,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.3266331658291457,
+      "solomonoff_score": 0.22211055276381905
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "Each colored cell in the input grid expands vertically, creating a column that includes the original cell's position and extends both upwards and downwards until it hits another colored cell or the grid border.",
+        "sub_hypotheses": [
+          "Level 1: Each individual colored cell in the input grid replicates itself vertically in both directions, up and down, creating a column.",
+          "Level 2: The expansion of each colored cell stops when it encounters another colored cell or the grid border, thereby creating an interaction and boundary between different colored cells.",
+          "Level 3: The overall grid emerges as a set of vertical columns, each colored according to the original colored cell, with the columns' heights determined by the positions of the original cells relative to each other and the grid borders."
+        ]
+      },
+      "accuracy": 0.6000000000000001,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              5
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              7,
+              0,
+              8,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              8,
+              0
+            ],
+            [
+              0,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.64,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ]
+          ],
+          "predicted": [
+            [
+              2,
+              0,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.56,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.2814070351758794,
+      "solomonoff_score": 0.16884422110552766
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "Objects in the grid are replicated vertically and positioned in a way to form a column of each object type.",
+        "sub_hypotheses": [
+          "Level 1: Each object in the grid is replicated to form a column. The size of each object increases as it is replicated to fill the column.",
+          "Level 2: The relative positions of the objects in the output grid are maintained as in the input grid. The vertical alignment of the objects is maintained.",
+          "Level 3: The overall grid pattern shows that each object forms a column, and these columns are arranged in the same sequence as the objects in the input grid."
+        ]
+      },
+      "accuracy": 0.48000000000000004,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              5
+            ]
+          ],
+          "predicted": [
+            [
+              1,
+              0,
+              6,
+              7,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              7,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              7,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              7,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              7,
+              5
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.4,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              2,
+              3,
+              5,
+              3
+            ],
+            [
+              1,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.56,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.42211055276381915,
+      "solomonoff_score": 0.2026130653266332
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "The objects are replicated in the output grid by adding copies in the vertical direction.",
+        "sub_hypotheses": [
+          "Level 1: Each individual object is replicated vertically based on the number of unique objects present in the input grid.",
+          "Level 2: The relative positions between objects are maintained in the output grid.",
+          "Level 3: The overall grid size remains unchanged."
+        ]
+      },
+      "accuracy": 0.56,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              5
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              6,
+              8,
+              5
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.56,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.56,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.6733668341708543,
+      "solomonoff_score": 0.37708542713567844
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "Each object in the grid is replicated in its row until it fills the row from its original position to the leftmost or rightmost side, based on its initial position in the input grid.",
+        "sub_hypotheses": [
+          "Level 1: Each object is replicated in its row, resulting in multiple instances of the object.",
+          "Level 2: The replication of objects occurs until the row is filled from the original position of the object to the leftmost or rightmost side.",
+          "Level 3: The entire grid shows a pattern where each row is filled with replicated objects, creating a distinct pattern in each row based on the initial objects."
+        ]
+      },
+      "accuracy": 0.44,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              5
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              1,
+              8,
+              8
+            ],
+            [
+              0,
+              0,
+              6,
+              6,
+              6
+            ],
+            [
+              7,
+              7,
+              7,
+              7,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.4,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              2,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.48,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.40201005025125625,
+      "solomonoff_score": 0.17688442211055275
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "Each object in the grid is duplicated in the vertical direction, with copies placed above and below the original object until they fill the grid or reach another object.",
+        "sub_hypotheses": [
+          "Level 1: Each individual object is duplicated and placed above and below its original position.",
+          "Level 2: The duplication process stops when it encounters another object.",
+          "Level 3: The process results in the vertical expansion of the objects, filling the grid from top to bottom."
+        ]
+      },
+      "accuracy": 0.5,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              5
+            ]
+          ],
+          "predicted": [
+            [
+              1,
+              0,
+              0,
+              8,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              0,
+              7,
+              6,
+              0,
+              5
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.56,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ]
+          ],
+          "predicted": [
+            [
+              2,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              2,
+              1,
+              3,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.44,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.5728643216080402,
+      "solomonoff_score": 0.2864321608040201
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "The objects in the grid are shifted, duplicated, or expanded in the vertical direction according to their relations to other objects.",
+        "sub_hypotheses": [
+          "Level 1: Individual objects are expanded or duplicated in the vertical direction. The number of duplications or expansions depends on their relations to other objects.",
+          "Level 2: Objects relate to each other in terms of position. The delta values between objects in the input are used to determine the expansion or duplication of objects in the output.",
+          "Level 3: There's an overall pattern of vertical expansion and duplication across the grid. The grid effectively 'stretches' vertically as individual objects expand or duplicate, filling in previously empty spaces."
+        ]
+      },
+      "accuracy": 0.6200000000000001,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              5
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              0,
+              6,
+              8,
+              0
+            ],
+            [
+              0,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              5
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.68,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.56,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.3517587939698492,
+      "solomonoff_score": 0.21809045226130655
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "Objects in the grid are duplicated to fill their column from top to bottom, maintaining their color and position.",
+        "sub_hypotheses": [
+          "Level 1: Each object is duplicated maintaining its color and position, but extending its shape to fill the column in which it's located.",
+          "Level 2: The objects do not interact with each other when being duplicated, each one fills its column independently.",
+          "Level 3: The overall grid transforms into a pattern where each column is filled with the colors of the original objects present in it."
+        ]
+      },
+      "accuracy": 0.66,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              5
+            ]
+          ],
+          "predicted": [
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              0,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.68,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ]
+          ],
+          "predicted": [
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.64,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.507537688442211,
+      "solomonoff_score": 0.3349748743718593
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "Objects in the grid are duplicated vertically based on their initial position from the top to the bottom of the grid. Each object is replicated based on the number of its initial vertical position plus one.",
+        "sub_hypotheses": [
+          "Level 1: Each individual object is duplicated vertically. The number of duplicates is the same as the object's initial vertical position plus one.",
+          "Level 2: All objects maintain their original relative horizontal positions during duplication. The vertical position of the duplicates is determined by the original position of the object.",
+          "Level 3: The overall grid expands vertically, having more rows as a result of the vertical duplication of objects. The grid maintains its original width."
+        ]
+      },
+      "accuracy": 0.54,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              5
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.52,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.56,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.3668341708542714,
+      "solomonoff_score": 0.19809045226130656
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "Each unique colored object in the input grid is expanded vertically to fill any empty space above it until it hits another object or the grid boundary, while preserving its original shape.",
+        "sub_hypotheses": [
+          "Level 1: Individual objects grow vertically upwards in the grid, while maintaining their color and shape.",
+          "Level 2: The growth of each object stops when it encounters another object or the grid boundary, ensuring objects do not overlap.",
+          "Level 3: The entire grid becomes filled with the expanded objects, leading to a less sparse and more populated grid."
+        ]
+      },
+      "accuracy": 0.6000000000000001,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              5
+            ]
+          ],
+          "predicted": [
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.56,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              0,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.64,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.4824120603015075,
+      "solomonoff_score": 0.28944723618090457
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "Objects are replicated downwards in the grid based on the color of the object. The number of replications is determined by the number of the different colors present in the grid.",
+        "sub_hypotheses": [
+          "Level 1: Objects are replicated downwards in the same column.",
+          "Level 2: The number of replications of each object is equal to the total number of different colors present in the grid.",
+          "Level 3: The overall grid shows a pattern where objects are replicated downwards filling the grid in a vertical manner."
+        ]
+      },
+      "accuracy": 0.68,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              5
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              0,
+              6,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.68,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              0,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.68,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.5226130653266332,
+      "solomonoff_score": 0.35537688442211063
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "All the distinct colored cells in the input grid are duplicated and arranged in a vertical column in their respective columns in the output grid",
+        "sub_hypotheses": [
+          "Level 1: Each object or colored cell in the input grid is duplicated in the output grid, retaining the same color and column, but changing rows to form a column with the duplicates",
+          "Level 2: Despite the duplication of each individual object, the relations between different objects remain similar, i.e., objects that were in the same column in the input grid remain in the same column in the output grid",
+          "Level 3: The overall pattern visible in the output grid is that of columns filled with identical objects, with the number of objects in each column being double the number of distinct objects in that column in the input grid"
+        ]
+      },
+      "accuracy": 0.6000000000000001,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              5
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              0,
+              6,
+              8,
+              0
+            ],
+            [
+              0,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.64,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              0,
+              5,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.56,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.2613065326633166,
+      "solomonoff_score": 0.15678391959798998
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "Objects in the input grid expand both vertically upwards and downwards from their original position, maintaining their original column. Some objects may expand to occupy a total of 2, 3, or 4 cells in the output grid depending on their input relationships.",
+        "sub_hypotheses": [
+          "Level 1: Each individual object in the input grid expands from its original position to fill more cells vertically.",
+          "Level 2: The expansion of objects is independent of other objects in the grid, each object expands according to its own input relationships.",
+          "Level 3: The overall grid increases in complexity, with more cells being filled by various colored objects. The output grid is a vertical expansion of the input grid."
+        ]
+      },
+      "accuracy": 0.68,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              5
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              0,
+              6,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              0,
+              7,
+              6,
+              0,
+              5
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.68,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.68,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.3417085427135679,
+      "solomonoff_score": 0.23236180904522616
+    },
+    {
+      "hypothesis": {
+        "hypothesis": "Each object in the input grid is expanded vertically, stretching downwards until it reaches the bottom of the grid or another object. The expanded parts take on the same color (value) as the original object. If a space is encountered which is already occupied by another object's expansion, the latter overwrites the former.",
+        "sub_hypotheses": [
+          "Level 1: Each object in the grid expands vertically, filling all available cells beneath it with the same color (value).",
+          "Level 2: The rule of expansion applies to all objects in the grid at the same time. If an expanded part of an object occupies a space that another object is also expanding into, the second object's expansion overwrites the first.",
+          "Level 3: The overall pattern visible in the grid after all expansions have been performed is a stratified appearance, with each object having formed a horizontal band across the grid, the topmost band corresponding to the topmost object in the input grid, and so on."
+        ]
+      },
+      "accuracy": 0.68,
+      "per_example": [
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              0
+            ],
+            [
+              0,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              6,
+              0,
+              5
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              8,
+              0
+            ],
+            [
+              1,
+              0,
+              6,
+              8,
+              0
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ],
+            [
+              1,
+              7,
+              6,
+              8,
+              5
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.68,
+          "equal": false
+        },
+        {
+          "input": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "expected": [
+            [
+              0,
+              1,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              0,
+              3,
+              0,
+              3
+            ]
+          ],
+          "predicted": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              0,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ],
+            [
+              2,
+              1,
+              3,
+              5,
+              3
+            ]
+          ],
+          "status": "ok",
+          "cell_accuracy": 0.68,
+          "equal": false
+        }
+      ],
+      "simplicity": 0.055276381909547756,
+      "solomonoff_score": 0.03758793969849248
+    }
+  ],
+  "eval_example_input": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      8,
+      8,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      3,
+      6,
+      6
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "eval_example_expected": [
+    [
+      0,
+      8,
+      0,
+      6,
+      0
+    ],
+    [
+      8,
+      8,
+      0,
+      6,
+      0
+    ],
+    [
+      8,
+      0,
+      3,
+      6,
+      6
+    ],
+    [
+      8,
+      0,
+      3,
+      0,
+      6
+    ],
+    [
+      8,
+      0,
+      3,
+      0,
+      6
+    ]
+  ],
+  "per_hyp_eval_predictions": [
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        3,
+        6,
+        6
+      ],
+      [
+        0,
+        0,
+        3,
+        6,
+        6
+      ],
+      [
+        0,
+        0,
+        3,
+        6,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        8,
+        0,
+        3,
+        6
+      ],
+      [
+        0,
+        8,
+        0,
+        3,
+        6
+      ],
+      [
+        0,
+        8,
+        0,
+        3,
+        6
+      ],
+      [
+        0,
+        8,
+        0,
+        3,
+        6
+      ],
+      [
+        0,
+        8,
+        0,
+        3,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        3,
+        6,
+        6
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        3,
+        6,
+        6
+      ],
+      [
+        8,
+        8,
+        3,
+        6,
+        6
+      ],
+      [
+        8,
+        8,
+        3,
+        6,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        3,
+        6,
+        6
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        3,
+        6,
+        6
+      ],
+      [
+        0,
+        0,
+        3,
+        6,
+        6
+      ],
+      [
+        0,
+        0,
+        3,
+        6,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        3,
+        6,
+        6
+      ],
+      [
+        8,
+        8,
+        3,
+        6,
+        6
+      ],
+      [
+        8,
+        8,
+        3,
+        6,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        3,
+        6,
+        6
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        3,
+        6,
+        6
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        3,
+        6,
+        6
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      [
+        3,
+        3,
+        3,
+        6,
+        6
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        6,
+        6
+      ],
+      [
+        0,
+        0,
+        3,
+        6,
+        6
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        6,
+        6
+      ],
+      [
+        0,
+        0,
+        3,
+        6,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        3,
+        6,
+        6
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        6,
+        6
+      ],
+      [
+        0,
+        0,
+        3,
+        6,
+        6
+      ]
+    ],
+    [
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        6,
+        6
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        3,
+        6,
+        6
+      ],
+      [
+        0,
+        0,
+        3,
+        6,
+        6
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        6,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        6,
+        6
+      ],
+      [
+        0,
+        0,
+        3,
+        6,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        3,
+        6,
+        6
+      ],
+      [
+        8,
+        8,
+        3,
+        6,
+        6
+      ],
+      [
+        8,
+        8,
+        3,
+        6,
+        6
+      ]
+    ]
+  ],
+  "solomonoff_scores": [
+    0.21185929648241206,
+    0.2765829145728643,
+    0.3150753768844221,
+    0.3458291457286432,
+    0.27105527638190957,
+    0.3798994974874372,
+    0.22211055276381905,
+    0.16884422110552766,
+    0.2026130653266332,
+    0.37708542713567844,
+    0.17688442211055275,
+    0.2864321608040201,
+    0.21809045226130655,
+    0.3349748743718593,
+    0.19809045226130656,
+    0.28944723618090457,
+    0.35537688442211063,
+    0.15678391959798998,
+    0.23236180904522616,
+    0.03758793969849248
+  ],
+  "weighted_matrix": {
+    "per_cell_probs": [
+      [
+        {
+          "0": 0.8177355565713377,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.18226444342866224,
+          "9": 0.0
+        },
+        {
+          "0": 0.5165053560426894,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.4834946439573107,
+          "9": 0.0
+        },
+        {
+          "0": 1.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.9453067551722083,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.054693244827791795,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.9453067551722083,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.054693244827791795,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        }
+      ],
+      [
+        {
+          "0": 0.20160184430709302,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.798398155692907,
+          "9": 0.0
+        },
+        {
+          "0": 0.0,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 1.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.9650217620287378,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.034978237971262184,
+          "9": 0.0
+        },
+        {
+          "0": 0.910328517200946,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.054693244827791795,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.03497823797126219,
+          "9": 0.0
+        },
+        {
+          "0": 0.910328517200946,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.054693244827791795,
+          "7": 0.0,
+          "8": 0.03497823797126219,
+          "9": 0.0
+        }
+      ],
+      [
+        {
+          "0": 0.41510821392372355,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.03497823797126219,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.5499135481050142,
+          "9": 0.0
+        },
+        {
+          "0": 0.11387801339507522,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.034978237971262184,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.8511437486336626,
+          "9": 0.0
+        },
+        {
+          "0": 0.21394359759127135,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.7860564024087288,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.15925035276347957,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.054693244827791795,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.7860564024087288,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.15925035276347957,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.8407496472365205,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        }
+      ],
+      [
+        {
+          "0": 0.8401931752687959,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.15980682473120414,
+          "9": 0.0
+        },
+        {
+          "0": 0.5389629747401474,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.4610370252598526,
+          "9": 0.0
+        },
+        {
+          "0": 0.5080787805314307,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.49192121946856926,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.45338553570363893,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.054693244827791795,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.49192121946856926,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.45338553570363893,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.5466144642963611,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        }
+      ],
+      [
+        {
+          "0": 0.8401931752687959,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.15980682473120414,
+          "9": 0.0
+        },
+        {
+          "0": 0.569966412941948,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.43003358705805195,
+          "9": 0.0
+        },
+        {
+          "0": 0.6039906989685395,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.39600930103146054,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.5492974541407477,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.054693244827791795,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.39600930103146054,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        },
+        {
+          "0": 0.5492974541407477,
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.45070254585925223,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0
+        }
+      ]
+    ],
+    "argmax_grid": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        8,
+        3,
+        6,
+        6
+      ],
+      [
+        0,
+        0,
+        0,
+        6,
+        6
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "colors": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+}
